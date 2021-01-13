@@ -8,47 +8,15 @@ article, aside, footer, header, nav, section, figcaption, figure, main {
 /* Columns and layout */
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 }
-#__bs_notify__ {
-  display: none !important;
-}
+
 main {
   margin: 0 auto;
   padding: 0 2rem;
   max-width: 1280px;
   width: 100%;
 }
-.module {
-  margin: 8rem 0;
-  padding: 2rem;
-}
-.flex-grid {
-  display: flex;
-  justify-content: center;
-}
-.col {
-  flex: 1;
-  padding: 2rem;
-  position: relative;
-}
-.col:nth-child(n+1) {
-  margin-left: 2rem;
-}
-.col:last-child {
-  margin-right: 2rem;
-}
-.col.vertical-align {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.single-column .col {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60rem;
-  width: 100%;
-}
+
 @media (max-width: 680px) {
   .flex-grid {
     display: block;
@@ -148,27 +116,11 @@ footer li:first-child::before {
   margin-left: -2rem;
 }
 
-.section-title {
-  text-align: center;
-}
-.button {
-  background: #269300;
-  border-radius: .25em;
-  color: #fff;
-  display: inline-block;
-  padding: .25em .5em;
-  margin: 0 auto;
-  text-align: center;
-}
-
 html, body {
   background: #000;
   color: #aaa;
 }
 
-a {
-  text-decoration: underline;
-}
 
 .content {
   margin: 10em auto;
@@ -179,4 +131,97 @@ a {
 p {
   font-size: 3em;
   margin: 6em auto;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  text-transform: uppercase;
+
+}
+
+header:after {
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+    bottom: 0;
+  content: "";
+    left: 0;
+  position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.row {
+  display: flex;
+}
+
+.heading {
+    bottom: 10vh;
+  color: white;
+  font-size: 9em;
+    left: 0;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+    right: 0;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+}
+
+.content p {
+  transform: translateZ(0);
+  z-index: 10;
+}
+
+.floating-rocks {
+  position: absolute;
+}
+
+.front-one {
+  right: -10em;
+}
+
+.front-two {
+  left: -12em;
+}
+
+.back-one {
+  left: -4em;
+  opacity: .2;
+  z-index: 0;
+}
+
+.back-two {
+  opacity: .1;
+  right: -20em;
+  z-index: 0;
+}
+
+footer {
+  background: url(../images/moon2.jpg) top center no-repeat;
+  opacity: 40%;
+  background-size: cover;
+  height: 1014px;
+  position: relative;
+}
+
+footer .heading {
+  bottom: auto;
+  color: rgb(51, 47, 47);
+  top: 42%;
+  text-shadow: rgb(228, 221, 193) 3px 0 10px;}
+
+.overflow{
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(360deg, rgba(9,136,155,0.5354516806722689) 0%, rgba(0,0,0,1) 85%);
+  margin: 0;
 }
